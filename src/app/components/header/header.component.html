@@ -1,0 +1,47 @@
+<div class="bg-primary hidden md:flex justify-between px-5 py-2">
+    <div class="flex items-center space-x-5">
+        <div class=""><img src="assets/logo.svg" alt="" class="w-10"></div>
+        <div class=""><img src="assets/agyl.svg" alt="" class="w-32"></div>
+    </div>
+    <div class="flex items-center space-x-10 pr-10 text-white">
+        <div class="relative parent">
+            <div class="flex items-center cursor-pointer opacity-60">Notre offre <span class="pt-1 pl-2"><img src="assets/arrow-down.svg" alt="" class=""></span></div>
+            <div class="absolute -left-5 bg-white opacity-100 rounded-xl w-36 p-2 hidden child">
+                <div class="text-center cursor-pointer hover:underline" style="color: #646081;" *ngFor="let item of dropdown">{{item}}</div>
+            </div>
+        </div>
+        <div class="cursor-pointer opacity-60">Rejoindre Agyl</div>
+        <div class=""><button class=" p-1 rounded-xl cursor-pointer border-2 opacity-60" style="background-color: #4B4864; border-color: #8E88C1;">Faire appel à nous</button></div>
+    </div>
+</div>
+
+<!-- responsive -->
+<div class="relative md:hidden">
+    <div class="flex justify-between items-center p-2" style="background-color: #141C5B;" [ngClass]="showMenu ? 'h-12':''">
+        <div class="flex items-center space-x-5" *ngIf="!showMenu">
+            <div class=""><img src="assets/logo.svg" alt="" class="w-10"></div>
+            <div class=""><img src="assets/agyl.svg" alt="" class="w-32"></div>
+        </div>
+        <div class="" (click)="showMenu = true" *ngIf="!showMenu"><img src="assets/menu.svg" alt="" class=""></div>
+    </div>
+    <div class="absolute z-0 top-0 right-0 w-64 rounded-lg p-2 space-y-5" style="background-color: #30345A;" *ngIf="showMenu">
+        <div class="flex justify-between items-center py-2 px-4 border-b-2 -mx-2">
+            <div class="flex items-center space-x-5">
+                <div class=""><img src="assets/logo.svg" alt="" class="w-5"></div>
+                <div class=""><img src="assets/agyl.svg" alt="" class="w-16"></div>
+            </div>
+            <div class="" (click)="showMenu = false"><img src="assets/close.svg" alt="" class=""></div>
+        </div>
+        <div class="flex flex-col items-end space-y-3 pr-10">
+            <div class="flex flex-col" *ngFor="let item of menu" (click)="showSubmenu = !showSubmenu">
+                <div class="flex items-center space-x-5">
+                    <span class="" *ngIf="item.submenu.length>1"><img src="assets/arrow-down.svg" alt="" class="w-5"></span>
+                <div class="text-white opacity-60">{{item.name}}</div>
+                </div>
+                <div class="flex flex-col items-end" *ngIf="showSubmenu && item.submenu.length>1">
+                    <div class="" style="color: #8E88C1;" *ngFor="let item of item.submenu">{{item.name}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
