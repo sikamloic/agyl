@@ -1,17 +1,17 @@
 <app-header></app-header>
 <div class="text-gray-600 space-y-10">
-    <div class="bg-[url('assets/banner.png')] md:bg-[url('assets/banner2.png')] bg-repeat-round w-screen h-screen flex items-center justify-center md:justify-start banner" style="background-color: #141C5B;">
-        <ngx-slick-carousel class="carousel" 
-                        #slickModal="slick-carousel" 
-                        [config]="slideConfig">
-        <div ngxSlickItem *ngFor="let item of options">
-            <div class="flex flex-col items-start space-y-5 pl-10 md:w-96">
-                <div class="text-white font-black text-2xl">AGYL vous propose le meilleur des talents, pour </div>
-                <div class="text-2xl" style="color: #DADADA;">{{item}}</div>
-                <div class=""><button class="text-white text-opacity-60 p-1 rounded-lg h-12 text-lg w-56" style="background-color: #3F50E7;">Faire appel à nous</button></div>
+    <div class="bg-[url('assets/banner.png')] md:bg-[url('assets/banner2.png')] bg-repeat-round flex items-center justify-center md:justify-start banner" style="background-color: #141C5B;">
+        <ngx-slick-carousel class="w-11/12" 
+                            #slickModal="slick-carousel" 
+                            [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let item of titles" class="slide">
+                <div class="flex flex-col items-start space-y-5 pl-10 md:w-96">
+                    <div class="text-white font-black text-2xl">AGYL vous propose le meilleur des talents, pour </div>
+                    <div class="text-2xl" style="color: #DADADA;">{{item}}</div>
+                    <div class=""><button class="text-white text-opacity-60 p-1 rounded-lg h-12 text-lg w-56" style="background-color: #3F50E7;">Faire appel à nous</button></div>
+                </div>
             </div>
-        </div>
-    </ngx-slick-carousel>
+        </ngx-slick-carousel>
     </div>
     <div class="flex flex-col items-center space-y-5">
         <div class="text-primary text-2xl font-black">Ils nous ont fait confiance</div>

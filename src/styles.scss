@@ -3,7 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html{
+    margin: auto;
+    padding: 0;
+}
+body{
+    margin: auto;
+    padding: 0;
+}
 .bg-primary{
     background-color: #141C5B;
 }
