@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { SiteInternetComponent } from './pages/site-internet/site-internet.component';
+import { ApplicationMobileOuWebComponent } from './pages/application-mobile-ou-web/application-mobile-ou-web.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { SiteInternetComponent } from './pages/site-internet/site-internet.compo
     HeaderComponent,
     FooterComponent,
     AccueilComponent,
-    SiteInternetComponent
+    SiteInternetComponent,
+    ApplicationMobileOuWebComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+.parent:hover  .child{
+    display: flex;
+}
+
+@media (min-width: 768px){
+    .banner{
+        height: 550px;
+    }
+}

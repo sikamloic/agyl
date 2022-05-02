@@ -1,11 +1,17 @@
 <app-header></app-header>
 <div class="text-gray-600 space-y-10">
-    <div class="bg-[url('assets/banner.png')] md:bg-[url('assets/banner2.png')] bg-repeat-round w-screen h-screen flex items-center justify-center md:justify-start" style="background-color: #141C5B;">
-        <div class="flex flex-col items-start space-y-5 pl-10 md:w-96">
-            <div class="text-white font-black text-2xl">AGYL vous propose le meilleur des talents, pour </div>
-            <div class="" style="color: #DADADA;">refaire votre site internet/ développer votre application mobile ou web/ créé votre MVP engageant pour vos premiers utilisateurs/ créer vos boutiques e-commerce/ créer vos visuels ou interfaces design d'App ou de site</div>
-            <div class=""><button class="text-white text-opacity-60 p-1 rounded-lg h-10 text-lg" style="background-color: #3F50E7;">Faire appel à nous</button></div>
+    <div class="bg-[url('assets/banner.png')] md:bg-[url('assets/banner2.png')] bg-repeat-round w-screen h-screen flex items-center justify-center md:justify-start banner" style="background-color: #141C5B;">
+        <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let item of options">
+            <div class="flex flex-col items-start space-y-5 pl-10 md:w-96">
+                <div class="text-white font-black text-2xl">AGYL vous propose le meilleur des talents, pour </div>
+                <div class="text-2xl" style="color: #DADADA;">{{item}}</div>
+                <div class=""><button class="text-white text-opacity-60 p-1 rounded-lg h-12 text-lg w-56" style="background-color: #3F50E7;">Faire appel à nous</button></div>
+            </div>
         </div>
+    </ngx-slick-carousel>
     </div>
     <div class="flex flex-col items-center space-y-5">
         <div class="text-primary text-2xl font-black">Ils nous ont fait confiance</div>
@@ -19,25 +25,55 @@
     <div class="bg-primary flex flex-col items-center space-y-10 py-5">
         <div class="font-bold text-xl text-white text-center">Nos équipes sont les meilleur pour réaliser vos projet</div>
         <div class="flex flex-col items-center space-y-10 md:flex-row md:space-y-0 md:space-x-8">
-            <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 w-52 h-56 md:w-40 md:h-44" style="border-color: #8E88C1;">
-                <div class=""><img src="/assets/coding-2.svg" alt="" class="w-24 md:w-16"></div>
-                <div class="font-medium text-primary text-lg md:text-base text-center">Créer ou refaire votre site</div>
+            <div class="w-52 md:w-40 parent rounded-lg" style="background-color: #7271B3;">
+                <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 h-56 md:h-44 cursor-pointer" style="border-color: #8E88C1;" routerLink="/créer-site-internet">
+                    <div class=""><img src="/assets/coding-2.svg" alt="" class="w-24 md:w-16"></div>
+                    <div class="font-medium text-primary text-lg md:text-base text-center">Créer ou refaire votre site</div>
+                </div>
+                <div class="flex-col items-center justify-center space-y-2 p-2 hidden child">
+                    <div class="text-white opacity-60">Nous vous accompagnons dans la refonte ou la création de votre site internet. Nous intégrons une démarche qualité dès la conception et au long de l’intégration technique vos projets.</div>
+                    <div class=""><button class="bg-white text-black rounded-lg w-32">Parlons-en !</button></div>
+                </div>
             </div>
-            <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 w-52 h-56 md:w-40 md:h-44" style="border-color: #8E88C1;">
-                <div class=""><img src="/assets/smartphone.svg" alt="" class="w-24 md:w-16"></div>
-                <div class="font-medium text-primary text-lg md:text-base text-center">Developpement d’application</div>
+            <div class="parent w-52 md:w-40 rounded-lg" style="background-color: #7271B3;">
+                <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 h-56 md:h-44" style="border-color: #8E88C1;">
+                    <div class=""><img src="/assets/smartphone.svg" alt="" class="w-24 md:w-16"></div>
+                    <div class="font-medium text-primary text-lg md:text-base text-center">Developpement d’application</div>
+                </div>
+                <div class="flex-col items-center justify-center space-y-2 p-2 hidden child">
+                    <div class="text-white opacity-60">Avec des tarifs 4 à 5 fois inférieurs a ceux d’une agence, nos équipes développent vos applications mobiles et web.</div>
+                    <div class=""><button class="bg-white text-black rounded-lg w-32">Parlons-en !</button></div>
+                </div>
             </div>
-            <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 w-52 h-56 md:w-40 md:h-44" style="border-color: #8E88C1;">
-                <div class=""><img src="/assets/help.svg" alt="" class="w-24 md:w-16"></div>
-                <div class="font-medium text-primary text-lg md:text-base text-center">Renfort en developeur</div>
+            <div class="parent w-52 md:w-40 rounded-lg" style="background-color: #7271B3;">
+                <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 h-56 md:h-44" style="border-color: #8E88C1;">
+                    <div class=""><img src="/assets/help.svg" alt="" class="w-24 md:w-16"></div>
+                    <div class="font-medium text-primary text-lg md:text-base text-center">Renfort en developeur</div>
+                </div>
+                <div class="flex-col items-center justify-center space-y-2 p-2 hidden child">
+                    <div class="text-white opacity-60">Recruter des développeurs de talents à des tarifs compétitif pour rejoindre à distance ou en interne.</div>
+                    <div class=""><button class="bg-white text-black rounded-lg w-32">Parlons-en !</button></div>
+                </div>
             </div>
-            <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 w-52 h-56 md:w-40 md:h-44" style="border-color: #8E88C1;">
-                <div class=""><img src="/assets/web-design.svg" alt="" class="w-24 md:w-16"></div>
-                <div class="font-medium text-primary text-lg md:text-base text-center">UI UX design</div>
+            <div class="parent w-52 md:w-40 rounded-lg" style="background-color: #7271B3;">
+                <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 h-56 md:h-44" style="border-color: #8E88C1;">
+                    <div class=""><img src="/assets/web-design.svg" alt="" class="w-24 md:w-16"></div>
+                    <div class="font-medium text-primary text-lg md:text-base text-center">UI UX design</div>
+                </div>
+                <div class="flex-col items-center justify-center space-y-2 p-2 hidden child">
+                    <div class="text-white opacity-60">AGYL vous propose un service de design UI/UX adapté à vos besoins et en phase avec vos sprints de développement.</div>
+                    <div class=""><button class="bg-white text-black rounded-lg w-32">Parlons-en !</button></div>
+                </div>
             </div>
-            <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 w-52 h-56 md:w-40 md:h-44" style="border-color: #8E88C1;">
-                <div class=""><img src="/assets/shopping.svg" alt="" class="w-24 md:w-16"></div>
-                <div class="font-medium text-primary text-lg md:text-base text-center">Creer votre site e-commerce</div>
+            <div class="parent w-52 md:w-40 rounded-lg" style="background-color: #7271B3;">
+                <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 h-56 md:h-44" style="border-color: #8E88C1;">
+                    <div class=""><img src="/assets/shopping.svg" alt="" class="w-24 md:w-16"></div>
+                    <div class="font-medium text-primary text-lg md:text-base text-center">Creer votre site e-commerce</div>
+                </div>
+                <div class="flex-col items-center justify-center space-y-2 p-2 hidden child">
+                    <div class="text-white opacity-60">Nous concevons et développons vos boutiques E-commerce de qualité, fonctionnel et efficace.</div>
+                    <div class=""><button class="bg-white text-black rounded-lg w-32">Parlons-en !</button></div>
+                </div>
             </div>
         </div>
     </div>

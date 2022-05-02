@@ -23,6 +23,20 @@ export class AccueilComponent implements OnInit {
     'Développeur Javascript',
     'Développeur Angular',
   ]
+  titles = [
+    "refaire votre site internet",
+    "développer votre application mobile ou web",
+    "créé votre MVP engageant pour vos premiers utilisateurs",
+    "créer vos boutiques e-commerce",
+    "créer vos visuels ou interfaces design d'App ou de site"
+  ]
+  slideConfig = {
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "autoplay": true,
+    "speed": 5000,
+    "infinite": true,
+  };
   constructor() { }
 
   ngOnInit(): void {
