@@ -1,4 +1,4 @@
-<div class="bg-primary hidden md:flex justify-between px-5 py-2">
+<div class="bg-primary hidden md:flex justify-between px-5 py-2 m-auto">
     <div class="flex items-center space-x-5">
         <div class=""><img src="assets/logo.svg" alt="" class="w-10"></div>
         <div class=""><img src="assets/agyl.svg" alt="" class="w-32"></div>
@@ -6,7 +6,7 @@
     <div class="flex items-center space-x-10 pr-10 text-white">
         <div class="relative parent">
             <div class="flex items-center cursor-pointer opacity-60">Notre offre <span class="pt-1 pl-2"><img src="assets/arrow-down.svg" alt="" class=""></span></div>
-            <div class="absolute -left-5 bg-white opacity-100 rounded-xl w-36 p-2 hidden child">
+            <div class="absolute -left-5 bg-white opacity-100 rounded-xl w-36 p-2 hidden child z-50">
                 <div class="text-center cursor-pointer hover:underline" style="color: #646081;" *ngFor="let item of dropdown">{{item}}</div>
             </div>
         </div>
@@ -24,7 +24,7 @@
         </div>
         <div class="" (click)="showMenu = true" *ngIf="!showMenu"><img src="assets/menu.svg" alt="" class=""></div>
     </div>
-    <div class="absolute z-0 top-0 right-0 w-64 rounded-lg p-2 space-y-5" style="background-color: #30345A;" *ngIf="showMenu">
+    <div class="absolute z-50 top-0 right-0 w-64 rounded-lg p-2 space-y-5" style="background-color: #30345A; animation: menu 1s linear 0s 1 normal forwards;" *ngIf="showMenu">
         <div class="flex justify-between items-center py-2 px-4 border-b-2 -mx-2">
             <div class="flex items-center space-x-5">
                 <div class=""><img src="assets/logo.svg" alt="" class="w-5"></div>

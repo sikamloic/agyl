@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import SwiperCore, { SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-accueil',
@@ -33,9 +34,18 @@ export class AccueilComponent implements OnInit {
   slideConfig = {
     "slidesToShow": 1,
     "slidesToScroll": 1,
-    "autoplay": true,
+    "autoplay": {
+      delay: 0,
+    },
     "speed": 5000,
     "infinite": true,
+    "arrows": false,
+  };
+  config: SwiperOptions = {
+    slidesPerView: 1,
+    autoplay: true,
+    speed: 1000,
+    initialSlide: 1,
   };
   constructor() { }
 

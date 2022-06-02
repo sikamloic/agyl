@@ -9,6 +9,7 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
 import { SiteInternetComponent } from './pages/site-internet/site-internet.component';
 import { ApplicationMobileOuWebComponent } from './pages/application-mobile-ou-web/application-mobile-ou-web.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

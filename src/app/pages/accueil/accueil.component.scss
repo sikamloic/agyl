@@ -1,9 +1,16 @@
 .parent:hover  .child{
     display: flex;
+    animation: men 1s linear 0s 1  normal forwards;
 }
 
-@media (min-width: 768px){
-    .banner{
-        height: 550px;
-    }
+@keyframes men {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
