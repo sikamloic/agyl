@@ -1,33 +1,9 @@
 <app-header></app-header>
 <div class="text-gray-600 space-y-10">
-    <!-- <div class="bg-[url('assets/banner.png')] md:bg-[url('assets/banner2.png')] bg-repeat-round flex items-center justify-center md:justify-start banner" style="background-color: #141C5B;">
-        <ngx-slick-carousel class="w-full border-2 border-red-600" 
-                            #slickModal="slick-carousel" 
-                            [config]="slideConfig">
-            <div ngxSlickItem *ngFor="let item of titles" class="slide">
-                <div class="flex flex-col items-start space-y-5 pl-10 md:w-96">
-                    <div class="text-white font-black text-2xl">AGYL vous propose le meilleur des talents, pour </div>
-                    <div class="text-2xl" style="color: #DADADA;">{{item}}</div>
-                    <div class=""><button class="text-white text-opacity-60 p-1 rounded-lg h-12 text-lg w-56" style="background-color: #3F50E7;">Faire appel à nous</button></div>
-                </div>
-            </div>
-        </ngx-slick-carousel>
-    </div> -->
     <div class="relative">
         <img src="assets/banner2.png" alt="" class="hidden md:block">
         <img src="assets/banner.png" alt="" class="md:hidden">
-        <div class="absolute top-48 w-full">
-            <!-- <ngx-slick-carousel class="" 
-                                #slickModal="slick-carousel" 
-                                [config]="slideConfig">
-                <div ngxSlickItem *ngFor="let item of titles" class="">
-                    <div class="flex flex-col items-start space-y-5 pl-10 md:w-96">
-                        <div class="text-white font-black text-2xl">AGYL vous propose le meilleur des talents, pour </div>
-                        <div class="text-2xl" style="color: #DADADA;">{{item}}</div>
-                        <div class=""><button class="text-white text-opacity-60 p-1 rounded-lg h-12 text-lg w-56" style="background-color: #3F50E7;">Faire appel à nous</button></div>
-                    </div>
-                </div>
-            </ngx-slick-carousel> -->
+        <div class="absolute top-48 w-full an">
             <swiper #swiper [config]="config" class="">
                 <ng-template swiperSlide *ngFor="let item of titles">
                     <div class="flex flex-col items-start space-y-5 pl-10 md:w-96">
@@ -52,13 +28,13 @@
         <div class="font-bold text-xl text-white text-center">Nos équipes sont les meilleur pour réaliser vos projet</div>
         <div class="flex flex-col items-center space-y-10 md:flex-row md:space-y-0 md:space-x-8">
             <div class="w-52 md:w-40 parent rounded-lg" style="background-color: #7271B3;">
-                <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 h-56 md:h-44 cursor-pointer" style="border-color: #8E88C1;" routerLink="/créer-site-internet">
+                <div class="bg-white rounded-lg flex flex-col items-center space-y-5 px-2 justify-center border-2 h-56 md:h-44 cursor-pointer" style="border-color: #8E88C1;">
                     <div class=""><img src="/assets/coding-2.svg" alt="" class="w-24 md:w-16"></div>
                     <div class="font-medium text-primary text-lg md:text-base text-center">Créer ou refaire votre site</div>
                 </div>
                 <div class="flex-col items-center justify-center space-y-2 p-2 hidden child">
                     <div class="text-white opacity-60">Nous vous accompagnons dans la refonte ou la création de votre site internet. Nous intégrons une démarche qualité dès la conception et au long de l’intégration technique vos projets.</div>
-                    <div class=""><button class="bg-white text-black rounded-lg w-32">Parlons-en !</button></div>
+                    <div class=""><button class="bg-white text-black rounded-lg w-32" routerLink="/créer-site-internet">Parlons-en !</button></div>
                 </div>
             </div>
             <div class="parent w-52 md:w-40 rounded-lg" style="background-color: #7271B3;">
@@ -68,7 +44,7 @@
                 </div>
                 <div class="flex-col items-center justify-center space-y-2 p-2 hidden child">
                     <div class="text-white opacity-60">Avec des tarifs 4 à 5 fois inférieurs a ceux d’une agence, nos équipes développent vos applications mobiles et web.</div>
-                    <div class=""><button class="bg-white text-black rounded-lg w-32">Parlons-en !</button></div>
+                    <div class=""><button class="bg-white text-black rounded-lg w-32" routerLink="/application">Parlons-en !</button></div>
                 </div>
             </div>
             <div class="parent w-52 md:w-40 rounded-lg" style="background-color: #7271B3;">

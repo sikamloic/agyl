@@ -10,6 +10,9 @@ import { SiteInternetComponent } from './pages/site-internet/site-internet.compo
 import { ApplicationMobileOuWebComponent } from './pages/application-mobile-ou-web/application-mobile-ou-web.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SwiperModule } from 'swiper/angular';
+import { RenfortComponent } from './pages/renfort/renfort.component';
+import { DesignComponent } from './pages/design/design.component';
+import { ECommerceComponent } from './pages/e-commerce/e-commerce.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { SwiperModule } from 'swiper/angular';
     FooterComponent,
     AccueilComponent,
     SiteInternetComponent,
-    ApplicationMobileOuWebComponent
+    ApplicationMobileOuWebComponent,
+    RenfortComponent,
+    DesignComponent,
+    ECommerceComponent
   ],
   imports: [
     BrowserModule,
